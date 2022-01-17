@@ -20,7 +20,7 @@
 #     #         - ./node_modules
 #       - run:
 #           name: test
-#           command: npm test
+#           command: npm test --forceExit
 #           no_output_timeout: 1200
 
 
