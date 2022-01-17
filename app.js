@@ -55,4 +55,17 @@ mongoose.connect('mongodb+srv://elie:testuser@cluster0.bfhjd.mongodb.net/express
   .then(() => console.log("DB connected!"))
   .catch(err => console.log(err));
 
+afterAll(async () => {
+    try {
+      // Connection to Mongo killed.
+      await mongoose.disconnect();
+    } catch (error) {
+      console.log(`
+        You did something wrong dummy!
+        ${error}
+      `);
+      throw error;
+    }
+});
+
 module.exports = app;
