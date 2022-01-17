@@ -43,7 +43,7 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
-      - run: npm test
+      - run: npm test --forceExit
 
 
     parallelism: 4
